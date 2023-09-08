@@ -21,7 +21,7 @@ const Banner = () => {
                         </View>
 
                     </View>
-                    <TouchableOpacity style={tw`border-white border mt-5 w-28 rounded p-2`}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Withdraw')} style={tw`border-white border mt-5 w-28 rounded p-2`}>
                         <Text style={tw`text-white text-center`} >Withdraw</Text>
                     </TouchableOpacity>
                 </View>
@@ -32,17 +32,6 @@ const Banner = () => {
                 </View>
 
             </View>
-            {/* <View style={tw`flex-row m-5 justify-between`}>
-                <TouchableOpacity style={tw`border-gray-200 border w-28 rounded p-2`}>
-                    <Text style={tw`text-[#149A1A] text-center`} >Book A Bus</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={tw`bg-[#149A1A] w-28 rounded p-2`}>
-                    <Text style={tw`text-white text-center`} >Withdraw</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={tw`border-gray-200 border w-28 rounded p-2`}>
-                    <Text style={tw`text-[#149A1A] text-center`} >Transaction</Text>
-                </TouchableOpacity>
-            </View> */}
         </>
     )
 }

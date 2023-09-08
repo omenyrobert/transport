@@ -12,6 +12,10 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Received from "./screens/Received";
 import Send from "./screens/Send";
 import About from "./screens/About";
+import Success from "./screens/Success";
+import Withdraw from "./screens/Withdraw";
+import Success2 from "./screens/Success2";
+import AllTransactions from "./screens/AllTransactions";
 
 
 const Tab = createBottomTabNavigator();
@@ -59,6 +63,11 @@ function StackNav() {
             <Stack.Screen name="Send" component={Send} />
             <Stack.Screen name="About" component={About} />
             <Stack.Screen name="TabNav" component={TabNav} />
+            <Stack.Screen name="Success" component={Success} />
+            <Stack.Screen name="Success2" component={Success2} />
+            <Stack.Screen name="Withdraw" component={Withdraw} />
+            <Stack.Screen name="AllTransactions" component={AllTransactions}/>
+            
         </Stack.Navigator>
     )
 }
