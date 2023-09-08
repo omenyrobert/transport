@@ -53,7 +53,7 @@ const Withdraws = () => {
                     {withdraws.map((item) => {
                         return (
 
-                            <View style={tw`flex-row m-1 w-60 border h-28 border-gray-200 rounded-md`}>
+                            <View key={item.id} style={tw`flex-row m-1 w-60 border h-28 border-gray-200 rounded-md`}>
                                 <View style={tw`bg-gray-100 w-[40%]  p-3 flex justify-center`}>
                                     <Text style={tw`font-bold text-center`}>
                                         {item.type}

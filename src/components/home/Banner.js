@@ -26,13 +26,13 @@ const Banner = () => {
                     </TouchableOpacity>
                 </View>
                 <View style={tw`w-5/12 border-l-2 border-white p-2`}>
-                    <TouchableOpacity style={tw`bg-white rounded p-2 mt-8`}>
+                    <TouchableOpacity onPress={()=>navigation.navigate('Send')} style={tw`bg-white rounded p-2 mt-8`}>
                         <Text style={tw`text-center`}>Send Money</Text>
                     </TouchableOpacity>
                 </View>
 
             </View>
-            <View style={tw`flex-row m-5 justify-between`}>
+            {/* <View style={tw`flex-row m-5 justify-between`}>
                 <TouchableOpacity style={tw`border-gray-200 border w-28 rounded p-2`}>
                     <Text style={tw`text-[#149A1A] text-center`} >Book A Bus</Text>
                 </TouchableOpacity>
@@ -42,7 +42,7 @@ const Banner = () => {
                 <TouchableOpacity style={tw`border-gray-200 border w-28 rounded p-2`}>
                     <Text style={tw`text-[#149A1A] text-center`} >Transaction</Text>
                 </TouchableOpacity>
-            </View>
+            </View> */}
         </>
     )
 }

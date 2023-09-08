@@ -4,42 +4,46 @@ import SignUp from "./screens/SignUp";
 import ForgotPin from "./screens/ForgotPin";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./screens/Home";
-import Wallet from "./screens/Wallet";
+import Wallet from "./screens/Sent";
 import Support from "./screens/Support";
 import Buses from "./screens/Buses";
 import { Feather, Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Received from "./screens/Received";
+import Send from "./screens/Send";
+import About from "./screens/About";
 
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 function TabNav() {
     return (
-        <Tab.Navigator tabBarOptions={{
+        <Tab.Navigator screenOptions={{
             activeTintColor: '#149A1A',
-    
+
             labelStyle: {
-              fontSize: 12,
-              fontWeight: 'medium',
+                fontSize: 12,
+                fontWeight: 'medium',
             },
-          }} >
+        }} >
             <Tab.Screen name="Home" component={Home} options={{
-                tabBarIcon: ({color}) => <Feather name="home" size={24} color={color} />, headerShown: false
+                tabBarIcon: ({ color }) => <Feather name="home" size={24} color={color} />, headerShown: false
             }} />
-            <Tab.Screen name="Wallet"
+            <Tab.Screen name="Sent"
                 options={{
-                    tabBarIcon: ({color}) => <Ionicons name="wallet-outline" size={24} color={color} />,
-                    
+                    tabBarIcon: ({ color }) => <Ionicons name="wallet-outline" size={24} color={color} />, headerShown: false
+
                 }}
                 component={Wallet} />
-            <Tab.Screen name="Buses"
+            <Tab.Screen name="Received"
                 options={{
-                    tabBarIcon: ({color}) => <Ionicons name="bus" size={24} color={color} />
+                    tabBarIcon: ({ color }) => <MaterialIcons name="receipt-long" size={24} color={color} />, headerShown: false
                 }}
-                component={Buses} />
+                component={Received} />
+
             <Tab.Screen name="Support"
                 options={{
-                    tabBarIcon: ({color}) => <MaterialIcons name="support-agent" size={24} color={color} />
+                    tabBarIcon: ({ color }) => <MaterialIcons name="support-agent" size={24} color={color} />, headerShown: false
                 }}
                 component={Support} />
         </Tab.Navigator>
@@ -52,7 +56,9 @@ function StackNav() {
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="SignUp" component={SignUp} />
             <Stack.Screen name="ForgotPin" component={ForgotPin} />
-            <Stack.Screen  name="Home" component={TabNav} />
+            <Stack.Screen name="Send" component={Send} />
+            <Stack.Screen name="About" component={About} />
+            <Stack.Screen name="TabNav" component={TabNav} />
         </Stack.Navigator>
     )
 }
@@ -61,7 +67,7 @@ export default function Navigation() {
     return (
         <>
             <NavigationContainer>
-                <StackNav/>
+                <StackNav />
                 {/* <TabNav /> */}
             </NavigationContainer>
         </>

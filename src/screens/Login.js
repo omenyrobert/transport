@@ -34,7 +34,7 @@ const Login = () => {
                 <TouchableOpacity
 
                     style={tw`bg-[#149A1A] mt-2 p-2 rounded-md`}
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => navigation.navigate('TabNav')}
                 >
                     <Text style={tw`text-white text-center font-bold text-lg`}>Login</Text>
                 </TouchableOpacity>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { View, Text, TouchableOpacity, TextInput, Image } from "react-native";
 import tw from 'twrnc';
-const logourl = require('../../assets/icon.png')
+const logourl = require('../../assets/logo.png')
 
 const ForgotPin = ({ navigation }) => {
 

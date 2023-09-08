@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, FlatList, TouchableOpacity, TextInput, StyleSheet, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import tw from 'twrnc';
 import { useNavigation } from "@react-navigation/native";
 
@@ -54,7 +54,7 @@ const HomeBuses = () => {
                 {buses.map((item) => {
                     return (
 
-                        <View style={tw`flex-row  m-2 border h-28 border-gray-200 rounded-md`}>
+                        <View key={item.id} style={tw`flex-row  m-2 border h-28 border-gray-200 rounded-md`}>
                             <View style={tw`bg-gray-100 w-1/2  p-1 flex justify-center`}>
                                 <Image source={{ uri: item.photo }} style={tw`h-full w-full object-cover`} />
 
@@ -68,7 +68,7 @@ const HomeBuses = () => {
                                 <Text style={tw`text-lg mt-2`}>
                                     {item.contacts}
                                 </Text>
-                                <Text>
+                                <Text style={tw`text-gray-400`}>
                                     {item.location}
                                 </Text>
                             </View>
