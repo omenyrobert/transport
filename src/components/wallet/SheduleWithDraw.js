@@ -3,7 +3,6 @@ import { useState } from "react";
 import { View, Text, ScrollView, Image, TextInput, TouchableOpacity } from "react-native"
 import tw from 'twrnc';
 import CheckBox from "expo-checkbox";
-import DateTimePicker from '@react-native-community/datetimepicker';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useNavigation } from "@react-navigation/native";
 
@@ -44,7 +43,7 @@ const SheduleWithDraw = () => {
                 <Text>Choose Date</Text>
                 <MaterialIcons name="date-range" size={24} color="black" />
             </TouchableOpacity>
-            {open ? <DateTimePicker mode="date" value={new Date()} /> : null}
+           
 
             <View style={tw`bg-gray-200`}>
                 <Text style={tw`ml-5 mt-5`}>

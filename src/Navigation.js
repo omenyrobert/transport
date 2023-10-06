@@ -6,7 +6,6 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./screens/Home";
 import Wallet from "./screens/Sent";
 import Support from "./screens/Support";
-import Buses from "./screens/Buses";
 import { Feather, Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Received from "./screens/Received";
@@ -24,7 +23,6 @@ function TabNav() {
     return (
         <Tab.Navigator screenOptions={{
             activeTintColor: '#149A1A',
-
             labelStyle: {
                 fontSize: 12,
                 fontWeight: 'medium',
